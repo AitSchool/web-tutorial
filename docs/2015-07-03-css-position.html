@@ -1,0 +1,94 @@
+<html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>CSS &lt;strong&gt;position&lt;/strong&gt; · Aitschool</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta property="og:title" content="CSS &lt;strong&gt;position&lt;/strong&gt; · Aitschool"/><meta property="og:type" content="website"/><meta property="og:url" content="https://github.com/AitSchool/web-tutorial/index.html"/><meta property="og:description" content="The CSS `position` property is versatile and powerful. It allows to _set_ or _alter_ an element&#x27;s position. It has 4 possible **values**:"/><link rel="shortcut icon" href="/web-tutorial/undefined"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/web-tutorial/css/main.css"/></head><body class="sideNavVisible doc"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/web-tutorial/"><h2 class="headerTitle">Aitschool</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/web-tutorial/docs/introduction.html" target="_self">Docs</a></li><li class=""><a href="https://github.com/AitSchool" target="_self">Github</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1>CSS &lt;strong&gt;position&lt;/strong&gt;</h1></header><article><div><span><p>The CSS <code>position</code> property is versatile and powerful. It allows to <em>set</em> or <em>alter</em> an element's position. It has 4 possible <strong>values</strong>:</p>
+<ul>
+<li><code>static</code> (default value)</li>
+<li><code>relative</code></li>
+<li><code>absolute</code></li>
+<li><code>fixed</code></li>
+</ul>
+<p>It's often used alongside the 4 <strong>coordinates</strong> properties:</p>
+<ul>
+<li><code>left</code></li>
+<li><code>right</code></li>
+<li><code>top</code></li>
+<li><code>bottom</code></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="static"></a><a href="#static" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>static</h3>
+<p>This is the <strong>default</strong> <code>position</code> value: static elements just follow the <a href="css-the-flow.html">natural flow</a>. They aren't affected by any <code>left</code>, <code>right</code>, <code>top</code> or <code>bottom</code> value.</p>
+<h3><a class="anchor" aria-hidden="true" id="relative"></a><a href="#relative" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>relative</h3>
+<p>When the <code>position</code> is set to <strong>relative</strong>, an element can move according to its <strong>current position</strong>.</p>
+<p>{% highlight html %}</p>
+<p>Well, Ja should know his own business, I thought, and so I grasped the spear and clambered up toward the red man as rapidly as I could - being so far removed from my simian ancestors as I am</p>
+<p>I imagine the slow-witted sithic, as Ja called him, suddenly realized our intentions and that he was quite likely to lose all his meal instead of having it doubled as he had hoped</p>
+<p>When he saw me clambering up that spear he let out a hiss that fairly shook the ground, and came charging after me at a terrific rate</p>
+{% endhighlight %}
+<p>{% highlight css %}
+p{ border: 1px solid blue;}
+{% endhighlight %}</p>
+<div class="result">
+  <p style="border: 1px solid blue;">Well, Ja should know his own business, I thought, and so I grasped the spear and clambered up toward the red man as rapidly as I could - being so far removed from my simian ancestors as I am</p>
+  <p style="border: 1px solid blue;">I imagine the slow-witted sithic, as Ja called him, suddenly realized our intentions and that he was quite likely to lose all his meal instead of having it doubled as he had hoped</p>
+  <p style="border: 1px solid blue;">When he saw me clambering up that spear he let out a hiss that fairly shook the ground, and came charging after me at a terrific rate</p>
+</div>
+<p>Let's move the <strong>second</strong> paragraph:</p>
+<p>{% highlight html %}</p>
+<p>Well, Ja should know his own business, I thought, and so I grasped the spear and clambered up toward the red man as rapidly as I could - being so far removed from my simian ancestors as I am</p>
+<p class="second">I imagine the slow-witted sithic, as Ja called him, suddenly realized our intentions and that he was quite likely to lose all his meal instead of having it doubled as he had hoped</p>
+<p>When he saw me clambering up that spear he let out a hiss that fairly shook the ground, and came charging after me at a terrific rate</p>
+{% endhighlight %}
+<p>{% highlight css %}
+.second{ position: relative; border-color: red; left: 20px; top: 10px;}
+{% endhighlight %}</p>
+<div class="result">
+  <p style="border: 1px solid blue;">Well, Ja should know his own business, I thought, and so I grasped the spear and clambered up toward the red man as rapidly as I could - being so far removed from my simian ancestors as I am</p>
+  <p style="border: 1px solid red; position: relative; left: 20px; top: 10px;">I imagine the slow-witted sithic, as Ja called him, suddenly realized our intentions and that he was quite likely to lose all his meal instead of having it doubled as he had hoped</p>
+  <p style="border: 1px solid blue;">When he saw me clambering up that spear he let out a hiss that fairly shook the ground, and came charging after me at a terrific rate</p>
+</div>
+<p>The red paragraph has moved 20px <strong>from the left</strong> and 10px <strong>from the top</strong>, relative to its <em>natural</em> position, where it's <em>supposed</em> to be.</p>
+<p>Notice how the blue paragraphs haven't moved at all. By using relative positioning, the red paragraph can freely move without disrupting the layout. The only thing out of place is <em>itself</em>. All the other elements <strong>don't know that element has moved</strong>.</p>
+<h3><a class="anchor" aria-hidden="true" id="absolute"></a><a href="#absolute" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>absolute</h3>
+<p>When the <code>position</code> is set to <strong>absolute</strong>, an element can move according to the <strong>first positioned ancestor</strong>.</p>
+<h4><a class="anchor" aria-hidden="true" id="positioned-what-is-a-positioned-element"></a><a href="#positioned-what-is-a-positioned-element" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>&quot;Positioned?? What is a <em>positioned</em> element?&quot;</h4>
+<p>A <strong>positioned</strong> element is one whose <code>position</code> value is either <code>relative</code>, <code>absolute</code> or <code>fixed</code>. So unless the position is not set <em>or</em> static, an element is <strong>positioned</strong>.</p>
+<p>The characteristic of a <em>positioned</em> element is that it can act as a <strong>reference point for its child elements</strong>.</p>
+<p>Let's imagine a simple <strong>hierarchy</strong>:</p>
+<p>{% highlight html %}</p>
+<section>
+  I'm in position relative.
+  <p>
+    I'm in position absolute!
+  </p>
+</section>
+{% endhighlight %}
+<p>{% highlight css %}
+section {
+background: gold;
+height: 200px;
+padding: 10px;
+position: relative; /* This turns the <section> into a point of reference for the <p> */
+}</p>
+<p>p {
+background: limegreen;
+color: white;
+padding: 10px;
+position: absolute; /* This makes the <p> freely movable <em>/
+bottom: 10px; /</em> 10px from the bottom <em>/
+left: 20px; /</em> 20px from the left */
+}
+{% endhighlight %}</p>
+<div class="result">
+  <section style="background: gold; height: 200px; margin: 1em 0; padding: 10px; position: relative;">
+    I'm in position relative.
+    <p style="background: limegreen; bottom: 10px; color: white; left: 20px; margin: 0; padding: 10px; position: absolute;">
+      I'm in position absolute!
+    </p>
+  </section>
+</div>
+<p>The yellow section has a height of <code>200px</code> and its position set to <code>relative</code>, which turns it into a <strong>point of reference for all my child elements</strong>.</p>
+<p>As the green paragraph's position is set to <code>absolute</code>, it can freely move <em>according to</em> the yellow section. By setting both <code>bottom</code> and <code>left</code> values, it will move <em>from</em> the bottom left corner.</p>
+<h4><a class="anchor" aria-hidden="true" id="what-happens-if-we-set-both-left-and-right"></a><a href="#what-happens-if-we-set-both-left-and-right" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What happens if we set both left AND right?</h4>
+<p>If the <code>width</code> is not set, applying <code>left: 0</code> and <code>right: 0</code> will <strong>stretch the element across the whole width</strong>. It's the equivalent of setting <code>left: 0</code> and <code>width: 100%</code>.</p>
+<p>If the <code>width</code> is set, then the <code>right</code> value is discarded.</p>
+<h3><a class="anchor" aria-hidden="true" id="fixed"></a><a href="#fixed" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fixed</h3>
+<p>When the <code>position</code> is set to <strong>fixed</strong>, it acts like <strong>absolute</strong>: you can set left/right and top/bottom coordinates.</p>
+<p>The only difference is that the <strong>point of reference is the viewport</strong>. It means that a fixed element <em>won't scroll</em> with the page ; it is <em>fixed</em> on the screen.</p>
+</span></div></article></div><div class="docs-prevnext"></div></div></div></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2018 Facebook Inc.</section></footer></div></body></html>

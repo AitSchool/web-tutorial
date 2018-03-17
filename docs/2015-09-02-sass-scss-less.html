@@ -1,0 +1,57 @@
+<html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>&lt;strong&gt;Sass&lt;/strong&gt; vs &lt;strong&gt;SCSS&lt;/strong&gt; vs &lt;strong&gt;Less&lt;/strong&gt; · Aitschool</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta property="og:title" content="&lt;strong&gt;Sass&lt;/strong&gt; vs &lt;strong&gt;SCSS&lt;/strong&gt; vs &lt;strong&gt;Less&lt;/strong&gt; · Aitschool"/><meta property="og:type" content="website"/><meta property="og:url" content="https://github.com/AitSchool/web-tutorial/index.html"/><meta property="og:description" content="There are 2 CSS preprocessors to choose from:"/><link rel="shortcut icon" href="/web-tutorial/undefined"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/web-tutorial/css/main.css"/></head><body class="sideNavVisible doc"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/web-tutorial/"><h2 class="headerTitle">Aitschool</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/web-tutorial/docs/introduction.html" target="_self">Docs</a></li><li class=""><a href="https://github.com/AitSchool" target="_self">Github</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1>&lt;strong&gt;Sass&lt;/strong&gt; vs &lt;strong&gt;SCSS&lt;/strong&gt; vs &lt;strong&gt;Less&lt;/strong&gt;</h1></header><article><div><span><p>There are 2 CSS preprocessors to choose from:</p>
+<ul>
+<li><strong>Less</strong> <a href="http://lesscss.org">http://lesscss.org/</a></li>
+<li><strong>Sass</strong> <a href="http://sass-lang.com">http://sass-lang.com/</a></li>
+</ul>
+<p>They both have been around for several years. We're going to use <strong>Sass</strong>.</p>
+<h3><a class="anchor" aria-hidden="true" id="sass-vs-scss"></a><a href="#sass-vs-scss" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sass vs SCSS</h3>
+<p>Sass has 2 <strong>syntaxes</strong> available:</p>
+<ul>
+<li><strong>Sass</strong> itself (Syntactically Awesome StyleSheets) in <code>.sass</code> files</li>
+<li><strong>SCSS</strong> (Sassy CSS) in <code>.scss</code> files, which is something halfway between regular CSS and Sass</li>
+</ul>
+<p>The difference between Sass and SCSS is <a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html#syntax">quite subtle</a>.</p>
+<p>Remember that:</p>
+<ul>
+<li>Sass is the name of the preprocessor</li>
+<li>SCSS is easier to learn</li>
+<li>all resources on the internet (like <a href="http://thesassway.com/">The Sass Way</a>) mention Sass, not SCSS</li>
+<li>all features are available for both syntaxes</li>
+<li>everything in SCSS is available in Sass</li>
+</ul>
+<p>We're actually going to write <strong>SCSS</strong> but still call it <strong>Sass</strong>.</p>
+<h3><a class="anchor" aria-hidden="true" id="why-scss-first"></a><a href="#why-scss-first" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Why SCSS first</h3>
+<p>We're gonna use <strong>SCSS</strong> for a few reasons:</p>
+<ul>
+<li><strong>readibility</strong>: the syntax is very similar to CSS</li>
+<li><strong>learning curve</strong>: it only adds a few additional features on top of CSS</li>
+<li><strong>compatibility</strong>; a CSS file is a valid SCSS file</li>
+<li><strong>resources</strong>: lots of online articles to read and open source libraries to use</li>
+<li><strong>expandibility</strong>: it's easy to go from SCSS to Sass</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="features"></a><a href="#features" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Features</h3>
+<p>What Sass provides<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup> is:</p>
+<ul>
+<li><strong>variables</strong>: instead of repeating <code>#fce473</code> throughout your CSS file, just set <code>$yellow: #fce473</code> once</li>
+<li><strong>nesting</strong>: CSS rules can be nested within each other</li>
+<li><strong>mixins</strong>: custom functions that can accept parameters and will prevent useless repetitions</li>
+<li><strong>extensions</strong>: an easy way to inherit the same properties of another selector</li>
+<li><strong>operators</strong>: adding/substracting/multiplying/dividing values, like <code>960px / 4</code> or <code>$space * 2</code></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="dry-code"></a><a href="#dry-code" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>DRY code</h3>
+<p>Everything about Sass is to provide tools to <strong>prevent repeating yourself</strong> in your code: it's the <a href="https://en.wikipedia.org/wiki/Don't_repeat_yourself">DRY principle</a>, which stands for <em>Don't repeat yourself</em>.</p>
+<ul>
+<li><strong>variables</strong> prevents repeating <em>values</em></li>
+<li><strong>nesting</strong> prevents repeating <em>selectors</em></li>
+<li><strong>mixins</strong> and <strong>extensions</strong> prevent repeating <em>properties</em></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="installing-sass"></a><a href="#installing-sass" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Installing Sass</h3>
+<p>Head towards <a href="http://sass-lang.com/install">http://sass-lang.com/install</a> to install Sass on your computer.</p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1"  class="footnote-item"><p>and any CSS preprocessor for that matter, but I'll refer to Sass only from now on. <a href="#fnref1" class="footnote-backref">↩</a></p>
+</li>
+</ol>
+</section>
+</span></div></article></div><div class="docs-prevnext"></div></div></div></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2018 Facebook Inc.</section></footer></div></body></html>

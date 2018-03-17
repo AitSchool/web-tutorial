@@ -1,0 +1,145 @@
+<html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Sass &lt;strong&gt;mixins&lt;/strong&gt; · Aitschool</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta property="og:title" content="Sass &lt;strong&gt;mixins&lt;/strong&gt; · Aitschool"/><meta property="og:type" content="website"/><meta property="og:url" content="https://github.com/AitSchool/web-tutorial/index.html"/><meta property="og:description" content="When you find yourself writing the same code over and over again, it feels like Sass mixins might help you out."/><link rel="shortcut icon" href="/web-tutorial/undefined"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/web-tutorial/css/main.css"/></head><body class="sideNavVisible doc"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/web-tutorial/"><h2 class="headerTitle">Aitschool</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/web-tutorial/docs/introduction.html" target="_self">Docs</a></li><li class=""><a href="https://github.com/AitSchool" target="_self">Github</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1>Sass &lt;strong&gt;mixins&lt;/strong&gt;</h1></header><article><div><span><p>When you find yourself writing the same code over and over again, it feels like Sass mixins might help you out.</p>
+<p>Sass mixins are <strong>CSS functions</strong> that you can <strong>include</strong> whenever you want.</p>
+<h3><a class="anchor" aria-hidden="true" id="syntax"></a><a href="#syntax" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Syntax</h3>
+<p>Remember how we wrote <code>@keyframes</code> when creating <strong><a href="/css-animations.html">CSS animations</a></strong>? The Sass mixin syntax is fairly similar:</p>
+<p>{% highlight scss %}
+@mixin overlay() {
+bottom: 0;
+left: 0;
+position: absolute;
+right: 0;
+top: 0;
+}
+{% endhighlight %}</p>
+<p>The <strong>name</strong> of this mixin is <code>overlay</code>. You can reference this mixin in any CSS rule by using <code>@include</code>:</p>
+<p>{% highlight scss %}
+.modal-background{
+@include overlay();
+background: black;
+opacity: 0.9;
+}
+{% endhighlight %}</p>
+<p>As usual, this <code>.scss</code> will be compiled into <code>.css</code>:</p>
+<p>{% highlight css %}
+.modal-background{
+bottom: 0;
+left: 0;
+position: absolute;
+right: 0;
+top: 0;
+background: black;
+opacity: 0.9;
+}
+{% endhighlight %}</p>
+<h3><a class="anchor" aria-hidden="true" id="reusability"></a><a href="#reusability" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Reusability</h3>
+<p>The main purpose of a mixin is to make a <strong>set of properties reusable</strong>.</p>
+<p>Like Sass variables (where you define your <strong>values</strong> on a single location), Sass mixins allow you to define <strong>properties</strong> on a single location.</p>
+<p>The previous mixin can be reused in other rules:</p>
+<p>{% highlight scss %}
+.modal-background{
+@include overlay();
+}</p>
+<p>.product-link{
+@include overlay();
+}</p>
+<p>.image-pattern{
+@include overlay();
+}
+{% endhighlight %}</p>
+<p>{% highlight css %}
+.modal-background{
+bottom: 0;
+left: 0;
+position: absolute;
+right: 0;
+top: 0;
+}</p>
+<p>.product-link{
+bottom: 0;
+left: 0;
+position: absolute;
+right: 0;
+top: 0;
+}</p>
+<p>.image-pattern{
+bottom: 0;
+left: 0;
+position: absolute;
+right: 0;
+top: 0;
+}
+{% endhighlight %}</p>
+<h3><a class="anchor" aria-hidden="true" id="parameters"></a><a href="#parameters" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Parameters</h3>
+<p>Because mixins are <strong>functions</strong> and because you might want to <strong>alter</strong> the <em>output</em>, mixins can accept <strong>parameters</strong>.</p>
+<p>For example, this <a href="http://sass-lang.com/guide#topic-6-SCSS">border-radius mixin</a> prevents rewriting <strong>vendor prefixes</strong> and takes the actual <em>radius</em> value as a parameter:</p>
+<p>{% highlight scss %}
+@mixin border-radius($radius) {
+-webkit-border-radius: $radius;
+-moz-border-radius: $radius;
+-ms-border-radius: $radius;
+border-radius: $radius;
+}</p>
+<p>.box{
+@include border-radius(3px);
+}
+{% endhighlight %}</p>
+<p>{% highlight css %}
+.box{
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+-ms-border-radius: 3px;
+border-radius: 3px;
+}
+{% endhighlight %}</p>
+<p>The mixin circumvents the hassle of having to write all vendor prefixes, and uses the <code>$radius</code> to allow defining the same radius value for every vendor property.</p>
+<h3><a class="anchor" aria-hidden="true" id="optional-parameters"></a><a href="#optional-parameters" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Optional parameters</h3>
+<p>If you want a parameter to have a <strong>default</strong> value while providing the possibility to <em>set</em> one occasionally, you can create <strong>optional paramaters</strong>:</p>
+<p>{% highlight scss %}
+@mixin label($text: &quot;Code&quot;, $background: $yellow, $color: rgba(black, 0.5)) {
+position: relative;
+&amp;:before{
+background: $background;
+color: $color;
+content: $text;
+display: inline-block;
+font-size: 0.6rem;
+font-weight: 700;
+height: 1rem;
+left: 0;
+letter-spacing: 0.1em;
+line-height: 1rem;
+padding: 0 0.5em;
+position: absolute;
+text-transform: uppercase;
+top: 0;
+}
+}
+{% endhighlight %}</p>
+<p>This mixin is the one used by this website to add <strong>labels</strong> in the top left corner of code snippets. It has 3 optional parameters, each of them with their own default value set with a colon <code>:</code>.</p>
+<p>This mixin is used several times throughout the code:</p>
+<p>{% highlight scss %}
+div.highlighter-rouge{
+@include label();
+&amp;.css{
+@include label(&quot;CSS&quot;, $blue, white);
+}
+&amp;.scss{
+@include label(&quot;SCSS&quot;, #c69, white);
+}
+}
+{% endhighlight %}</p>
+<p>The <code>div.highlighter-rouge</code> will use the mixin's default values:</p>
+<ul>
+<li>text <code>&quot;Code&quot;</code></li>
+<li>background: <code>$yellow</code></li>
+<li>color: <code>rgba(black, 0.5)</code></li>
+</ul>
+<p>The <code>.css</code> and <code>.scss</code> versions, because their parameters are <em>set</em>, will use different labels and colors.</p>
+<h3><a class="anchor" aria-hidden="true" id="mixin-libraries"></a><a href="#mixin-libraries" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Mixin libraries</h3>
+<p>If you don't want to spend time writing your own Sass mixins, you can use any of the following <strong>mixin libraries</strong>:</p>
+<ul>
+<li><strong>Bourbon</strong>: <a href="http://bourbon.io/">bourbon.io</a></li>
+<li><strong>Compass</strong>: <a href="http://compass-style.org/">compass-style.org</a></li>
+<li><strong>Susy</strong>: <a href="http://susy.oddbird.net/">susy.oddbird.net</a></li>
+</ul>
+</span></div></article></div><div class="docs-prevnext"></div></div></div></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2018 Facebook Inc.</section></footer></div></body></html>

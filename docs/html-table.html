@@ -1,0 +1,237 @@
+<html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>表格 · Aitschool</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta property="og:title" content="表格 · Aitschool"/><meta property="og:type" content="website"/><meta property="og:url" content="https://github.com/AitSchool/web-tutorial/index.html"/><meta property="og:description" content="HTML **表格** 是意义是展示表格数据，仅用来展示可以通过**行**和**列**来展示的内容。"/><link rel="shortcut icon" href="/web-tutorial/undefined"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/web-tutorial/css/main.css"/></head><body class="sideNavVisible doc"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/web-tutorial/"><h2 class="headerTitle">Aitschool</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/web-tutorial/docs/introduction.html" target="_self">Docs</a></li><li class=""><a href="https://github.com/AitSchool" target="_self">Github</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>HTML</span></h2></div><div class="navGroups"><div class="navGroup navGroupActive"><h3>World Wide Web</h3><ul><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/introduction.html">初识 web 的世界</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/internet.html">什么是因特网</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/web.html">什么是万维网</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/browser.html">web 浏览器</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/requirement.html">学前准备</a></li></ul></div><div class="navGroup navGroupActive"><h3>HTML</h3><ul><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/htmlbasics.html">HTML 基础</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/htmlsyntax.html">HTML语法</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/htmlblockandinline.html">块级元素和行内元素</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/htmlhierarchy.html">HTML家族</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/htmlsemantics.html">HTML语义</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/htmlformatting.html">HTML语法规则</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/htmlvaliddocument.html">规范的HTML文档</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/htmlcontent.html">HTML文档</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/inlinesemantic.html">行内元素语义</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/htmltext.html">文本</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/htmllink.html">链接</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/html-image.html">图片</a></li><li class="navListItem navListItemActive"><a class="navItem navItemActive" href="/web-tutorial/docs/html-table.html">表格</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/html-structure.html">页面结构</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/html-form.html">表单</a></li></ul></div><div class="navGroup navGroupActive"><h3>CSS</h3><ul><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssbasic.html">基础</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/whycssexist.html">为何存在</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/csssyntax.html">语法</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssselector.html">选择器</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssinheritance.html">继承</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/csspriority.html">优先级</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/colorunit.html">颜色单位</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/sizeunit.html">布局单位</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/csssizeshorthand.html">合模型缩写</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssreset.html">样式重置</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/csstext.html">文本</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssfontfamily.html">字体</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssfontstyle.html">字体样式</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssfontshorthand.html">字体样式缩写</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/csslineheight.html">line-height</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/csstextstyle.html">文本样式</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssboxmodel.html">盒模型</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssbackground.html">background</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssborder.html">border</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/csspadding.html">padding</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssmargin.html">margin</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssposition.html">position</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssflow.html">文档流</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssfloat.html">float</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/css3.html">css3</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/csspresudo.html">类前缀</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssgradients.html">gradient</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/csstransition.html">transition</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssanimation.html">animation</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/csstransform.html">transform</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssresponsive.html">响应式</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssdisplay.html">display</a></li></ul></div></div></section></div><script>
+          var toggler = document.getElementById('navToggler');
+          var nav = document.getElementById('docsNav');
+          toggler.onclick = function() {
+            nav.classList.toggle('docsSliderActive');
+          };
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1>表格</h1></header><article><div><span><p>HTML <strong>表格</strong> 是意义是展示表格数据，仅用来展示可以通过<strong>行</strong>和<strong>列</strong>来展示的内容。</p>
+<p>It's like having a <strong>spreadsheet</strong> in Excel.</p>
+<p>看起来像Excel电子表格。</p>
+<h3><a class="anchor" aria-hidden="true" id="syntax"></a><a href="#syntax" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Syntax</h3>
+<h3><a class="anchor" aria-hidden="true" id=""></a><a href="#" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>语法</h3>
+<p>在 HTML 创建一个表格需要特殊的结构：</p>
+<ul>
+<li>使用 <code>&lt;table&gt;</code></li>
+<li>使用 <code>&lt;tr&gt;</code> 添加行</li>
+<li>使用 <code>&lt;td&gt;</code> 添加<em>均匀</em>的列或者标题</li>
+</ul>
+<p>创建表格至少要使用这三个元素。</p>
+<p>当我们写码的时候，我们需要从左到右，从上到下来定义表格内容。</p>
+<p>{% highlight html %}</p>
+<table>
+  <tr>
+    <td>John Lennon</td>
+    <td>Rhythm Guitar</td>
+  </tr>
+  <tr>
+    <td>Paul McCartney</td>
+    <td>Bass</td>
+  </tr>
+  <tr>
+    <td>George Harrison</td>
+    <td>Lead Guitar</td>
+  </tr>
+  <tr>
+    <td>Ringo Starr</td>
+    <td>Drums</td>
+  </tr>
+</table>
+{% endhighlight %}
+<div class="result">
+  <table>
+    <tr>
+      <td>John Lennon</td>
+      <td>Rhythm Guitar</td>
+    </tr>
+    <tr>
+      <td>Paul McCartney</td>
+      <td>Bass</td>
+    </tr>
+    <tr>
+      <td>George Harrison</td>
+      <td>Lead Guitar</td>
+    </tr>
+    <tr>
+      <td>Ringo Starr</td>
+      <td>Drums</td>
+    </tr>
+  </table>
+</div>
+<p>正如你所看到的，HTML里创建一个表格是比较繁琐的：仅仅创建几行数据就用到了那么多的标签。</p>
+<h3><a class="anchor" aria-hidden="true" id="thead-tfoot-tbody"></a><a href="#thead-tfoot-tbody" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>thead、 tfoot、 tbody</h3>
+<p>像网页一样，表格也有 header、foot、body，像HTML一样，这些标签都是纯<strong>语义</strong>的：为表格提供更多的结构。</p>
+<p><code>&lt;thead&gt;</code> <code>&lt;tfoot&gt;</code>  <code>&lt;tbody&gt;</code>  是由<strong>行</strong>组成，都是<code>&lt;table&gt;</code>的子元素，并且它的子元素是一个或多个<code>&lt;tr&gt;</code>。简而言之，它们是table下的第一级元素。</p>
+<p><code>&lt;thead&gt;</code> 和 <code>&lt;tfoot&gt;</code> 被用来做每一列的<strong>总览</strong>。</p>
+<p>让我们使用head和body升级之前的列表。</p>
+<p>{% highlight html %}</p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Instrument</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>John Lennon</td>
+      <td>Rhythm Guitar</td>
+    </tr>
+    <tr>
+      <td>Paul McCartney</td>
+      <td>Bass</td>
+    </tr>
+    <tr>
+      <td>George Harrison</td>
+      <td>Lead Guitar</td>
+    </tr>
+    <tr>
+      <td>Ringo Starr</td>
+      <td>Drums</td>
+    </tr>
+  </tbody>
+</table>
+{% endhighlight %}
+<div class="result">
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Instrument</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John Lennon</td>
+        <td>Rhythm Guitar</td>
+      </tr>
+      <tr>
+        <td>Paul McCartney</td>
+        <td>Bass</td>
+      </tr>
+      <tr>
+        <td>George Harrison</td>
+        <td>Lead Guitar</td>
+      </tr>
+      <tr>
+        <td>Ringo Starr</td>
+        <td>Drums</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<h3><a class="anchor" aria-hidden="true" id="tfoot-particularity"></a><a href="#tfoot-particularity" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>tfoot particularity</h3>
+<h3><a class="anchor" aria-hidden="true" id="tfoot"></a><a href="#tfoot" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>tfoot</h3>
+<p>添加tfoot给表格</p>
+<p>{% highlight html %}</p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Instrument</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <th>Name</th>
+      <th>Instrument</th>
+    </tr>
+  </tfoot>
+  <tbody>
+    <tr>
+      <td>John Lennon</td>
+      <td>Rhythm Guitar</td>
+    </tr>
+    <tr>
+      <td>Paul McCartney</td>
+      <td>Bass</td>
+    </tr>
+    <tr>
+      <td>George Harrison</td>
+      <td>Lead Guitar</td>
+    </tr>
+    <tr>
+      <td>Ringo Starr</td>
+      <td>Drums</td>
+    </tr>
+  </tbody>
+</table>
+{% endhighlight %}
+<div class="result">
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Instrument</th>
+      </tr>
+    </thead>
+    <tfoot>
+      <tr>
+        <th>Name</th>
+        <th>Instrument</th>
+      </tr>
+    </tfoot>
+    <tbody>
+      <tr>
+        <td>John Lennon</td>
+        <td>Rhythm Guitar</td>
+      </tr>
+      <tr>
+        <td>Paul McCartney</td>
+        <td>Bass</td>
+      </tr>
+      <tr>
+        <td>George Harrison</td>
+        <td>Lead Guitar</td>
+      </tr>
+      <tr>
+        <td>Ringo Starr</td>
+        <td>Drums</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<p>尽管我们把 <code>&lt;tfoot&gt;</code> 添加在 <code>&lt;tbody&gt;</code> 之前，它仍然出现在了表格的<strong>最后</strong>。</p>
+<p><code>&lt;tbody&gt;</code> 可以包含<em>大量</em>的数据，但是浏览器想在接收到所有数据之前先渲染foot。这也是为什么我们把<code>&lt;tfoot&gt;</code>写在前面的原因。</p>
+<h3><a class="anchor" aria-hidden="true" id="colspan-rowspan"></a><a href="#colspan-rowspan" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>colspan（跨列） 和 rowspan（跨行）</h3>
+<p><code>colspan</code> 允许一个单元格跨越多个列，<code>rowspan</code> 允许一个单元格跨越多行。</p>
+<p>也就是说，如果你想合并列，你需要使用 <code>rowspan</code>，它允许一<strong>列</strong>跨越多<em>行</em>。</p>
+<p>{% highlight html %}</p>
+<table border="1">
+  <tr>
+    <th colspan="2">Michael Jackson Singles</th>
+  </tr>
+  <tr>
+    <th rowspan="3">1979</th>
+    <td>Don't Stop 'Til You Get Enough</td>
+  </tr>
+  <tr>
+    <td>Rock with You</td>
+  </tr>
+  <tr>
+    <td>Off the Wall</td>
+  </tr>
+</table>
+{% endhighlight %}
+<div class="result">
+  <table border="1">
+    <tr>
+      <th colspan="2">Michael Jackson Singles</th>
+    </tr>
+    <tr>
+      <th rowspan="3">1979</th>
+      <td>Don't Stop 'Til You Get Enough</td>
+    </tr>
+    <tr>
+      <td>Rock with You</td>
+    </tr>
+    <tr>
+      <td>Off the Wall</td>
+    </tr>
+  </table>
+</div>
+<p>&quot;Michael Jackson Singles&quot; 行 跨越两列，所以，它下面的一行包括<strong>两</strong>列。</p>
+<p>&quot;1979&quot; 跨越了3行，它后面的两行都只有<em>一个</em>单元格，并且给&quot;1979&quot;让出了一列。</p>
+<p>一般来说，我们很难去创建一个不规则的表格，一种简单的方式是：先创建2*4的表格，然后删除表格以后添加 <code>colspan</code> 和 <code>rowspan</code> 属性。</p>
+<p>在上面这个例子中，我们认为它有<strong>8</strong>个单元格，我们只写了<strong>5</strong>个，但是 <code>colspan=&quot;2&quot;</code> 和 <code>rowspan=&quot;3&quot;</code> 带来了<strong>3个单元格</strong>。
+{: .info}</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="html-image.html">← 图片</a><a class="docs-next button" href="html-structure.html">页面结构 →</a></div></div></div></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2018 Facebook Inc.</section></footer></div></body></html>

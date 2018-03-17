@@ -1,0 +1,168 @@
+<html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>transition · Aitschool</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta property="og:title" content="transition · Aitschool"/><meta property="og:type" content="website"/><meta property="og:url" content="https://github.com/AitSchool/web-tutorial/index.html"/><meta property="og:description" content="CSS &lt;strong&gt;transitions&lt;/strong&gt; allow to smoothly go from one element&#x27;s state to another. How it works is that individual **properties** are animated from an **initial** to a **final** state."/><link rel="shortcut icon" href="/web-tutorial/undefined"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/web-tutorial/css/main.css"/></head><body class="sideNavVisible doc"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/web-tutorial/"><h2 class="headerTitle">Aitschool</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/web-tutorial/docs/introduction.html" target="_self">Docs</a></li><li class=""><a href="https://github.com/AitSchool" target="_self">Github</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>CSS</span></h2></div><div class="navGroups"><div class="navGroup navGroupActive"><h3>World Wide Web</h3><ul><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/introduction.html">初识 web 的世界</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/internet.html">什么是因特网</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/web.html">什么是万维网</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/browser.html">web 浏览器</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/requirement.html">学前准备</a></li></ul></div><div class="navGroup navGroupActive"><h3>HTML</h3><ul><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/htmlbasics.html">HTML 基础</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/htmlsyntax.html">HTML语法</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/htmlblockandinline.html">块级元素和行内元素</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/htmlhierarchy.html">HTML家族</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/htmlsemantics.html">HTML语义</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/htmlformatting.html">HTML语法规则</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/htmlvaliddocument.html">规范的HTML文档</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/htmlcontent.html">HTML文档</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/inlinesemantic.html">行内元素语义</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/htmltext.html">文本</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/htmllink.html">链接</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/html-image.html">图片</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/html-table.html">表格</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/html-structure.html">页面结构</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/html-form.html">表单</a></li></ul></div><div class="navGroup navGroupActive"><h3>CSS</h3><ul><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssbasic.html">基础</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/whycssexist.html">为何存在</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/csssyntax.html">语法</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssselector.html">选择器</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssinheritance.html">继承</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/csspriority.html">优先级</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/colorunit.html">颜色单位</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/sizeunit.html">布局单位</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/csssizeshorthand.html">合模型缩写</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssreset.html">样式重置</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/csstext.html">文本</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssfontfamily.html">字体</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssfontstyle.html">字体样式</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssfontshorthand.html">字体样式缩写</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/csslineheight.html">line-height</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/csstextstyle.html">文本样式</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssboxmodel.html">盒模型</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssbackground.html">background</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssborder.html">border</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/csspadding.html">padding</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssmargin.html">margin</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssposition.html">position</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssflow.html">文档流</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssfloat.html">float</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/css3.html">css3</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/csspresudo.html">类前缀</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssgradients.html">gradient</a></li><li class="navListItem navListItemActive"><a class="navItem navItemActive" href="/web-tutorial/docs/csstransition.html">transition</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssanimation.html">animation</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/csstransform.html">transform</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssresponsive.html">响应式</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssdisplay.html">display</a></li></ul></div></div></section></div><script>
+          var toggler = document.getElementById('navToggler');
+          var nav = document.getElementById('docsNav');
+          toggler.onclick = function() {
+            nav.classList.toggle('docsSliderActive');
+          };
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1>transition</h1></header><article><div><span><p>CSS <strong>transitions</strong> allow to smoothly go from one element's state to another. How it works is that individual <strong>properties</strong> are animated from an <strong>initial</strong> to a <strong>final</strong> state.</p>
+<p>You can define:</p>
+<ul>
+<li><code>transition-property</code>: which <strong>properties</strong> to animate</li>
+<li><code>transition-duration</code>: <strong>how long</strong> the animation lasts</li>
+<li><code>transition-timing-function</code>: how the <strong>intermediate states</strong> are calculated</li>
+<li><code>transition-delay</code>: to start the animation <strong>after</strong> a certain amount of time</li>
+</ul>
+<p>You can set each CSS property individually, or use the shorthand version: <code>transition</code>. In that case, only the <strong>duration is mandatory</strong>.</p>
+<p>Keep in mind that a <strong>transition is a specific kind of <em>animation</em>, where there's only a start and an end state</strong>.</p>
+<h3><a class="anchor" aria-hidden="true" id="quick-example"></a><a href="#quick-example" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Quick example</h3>
+<p>Transitions are often used on <strong>hover states</strong>.</p>
+<p>{% highlight css %}
+a{ background: lightgrey; color: grey;}
+a:hover{ background: yellow; color: red;}
+a.with-transition{ transition: 1s;}
+{% endhighlight %}</p>
+<div class="result" id="result-841">
+  <a>Without transition</a>
+  <a class="with-transition">With transition</a>
+</div>
+<p>Instead of the hover CSS rules being <strong>instantaneous</strong>, both the background <em>and</em> the text colors are slowly animated.</p>
+<h3><a class="anchor" aria-hidden="true" id="transition-duration"></a><a href="#transition-duration" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>transition-duration</h3>
+<p>A transition's duration is the only CSS property needed to create a transition. It can either be set in <strong>seconds</strong> <code>2s</code> or <strong>milliseconds</strong> <code>100ms</code>.</p>
+<p>If you want your transition to last <strong>half a second</strong>, you can either write <code>0.5s</code> or <code>500ms</code>. Depending on how fast you want your transitions to be, one unit might be easier and/or quicker to write.</p>
+<p>{% highlight css %}
+a{ background: lightgrey; color: grey;}
+a:hover{ background: yellow; color: green;}
+a.with-fast-transition{ transition-duration: 0.5s;}
+a.with-slow-transition{ transition: 3s;}
+{% endhighlight %}</p>
+<div class="result" id="result-842">
+  <a>Without transition</a>
+  <a class="with-fast-transition">A 0.5s transition</a>
+  <a class="with-slow-transition">A 3s transition</a>
+</div>
+<h3><a class="anchor" aria-hidden="true" id="transition-property"></a><a href="#transition-property" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>transition-property</h3>
+<p>Only <strong>1/3</strong> of CSS properties can be animated. Mozilla has a <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties">complete list</a>.</p>
+<p>By default, the <code>transition-property</code> property has a value of <code>all</code>, which simply means it will animate all possible properties.</p>
+<p>You can decide to only animate 1 or several properties.</p>
+<p>{% highlight css %}
+a{ background: lightgrey; color: grey;}
+a:hover{ background: yellow; border: 5px solid blue; color: green;}
+a.with-background-transition{ transition-duration: 2s; transition-property: background;}
+a.with-all-transition{ transition-duration: 2s;}
+{% endhighlight %}</p>
+<div class="result" id="result-843">
+  <a>Without transition</a>
+  <a class="with-background-transition">With only background transition</a>
+  <a class="with-all-transition">With all transitions</a>
+</div>
+<p>The <code>border</code> property is fully animatable and allows to easily visualize the slow (2 seconds) transition.</p>
+<h3><a class="anchor" aria-hidden="true" id="transition-timing-function"></a><a href="#transition-timing-function" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>transition-timing-function</h3>
+<p>The timing function determines how each property's <strong>value</strong> is calculated <strong>during the transition</strong>.</p>
+<p>By default, the transition is <strong>eased</strong>: it accelerates at the start and slows down at the end.</p>
+<p>You can meaning that the transition will happen at a <strong>constant speed</strong>. Timing functions can make the transition <strong>accelerate</strong> and/or <strong>slow down</strong>.</p>
+<p>The easiest way to visualize timing functions is by altering <strong>position properties</strong>, like <code>left</code>.</p>
+<p>{% highlight css %}
+div{ left: 0; position: relative; transition: 1s;}
+main:hover div{ left: 200px;}
+.ease{ transition-timing-function: ease;} /* Default behavior <em>/
+.linear{ transition-timing-function: linear;} /</em> Constant speed */
+.ease-in{ transition-timing-function: ease-in;}
+.ease-out{ transition-timing-function: ease-out;}
+.ease-in-out{ transition-timing-function: ease-out;}
+{% endhighlight %}</p>
+<p>{% highlight html %}
+<main></p>
+  <p><strong>Ease</strong>: slow start, fast middle, slow end</p>
+  <div class="ease"></div>
+  <p><strong>Linear</strong>: constant speed</p>
+  <div class="linear"></div>
+  <p><strong>Ease In</strong>: slow start, fast end</p>
+  <div class="ease-in"></div>
+  <p><strong>Ease Out</strong>: fast start, slow end</p>
+  <div class="ease-out"></div>
+  <p><strong>Ease In Out</strong>: like ease, but with more pronounced acceleration/deceleration curves</p>
+  <div class="ease-in-out"></div>
+</main>
+{% endhighlight %}
+<div class="result" id="result-844">
+  <p><strong>Ease</strong>: slow start, fast middle, slow end</p>
+  <div class="ease"></div>
+  <p><strong>Linear</strong>: constant speed</p>
+  <div class="linear"></div>
+  <p><strong>Ease In</strong>: slow start, fast end</p>
+  <div class="ease-in"></div>
+  <p><strong>Ease Out</strong>: fast start, slow end</p>
+  <div class="ease-out"></div>
+  <p><strong>Ease In Out</strong>: like ease, but with more pronounced acceleration/deceleration curves</p>
+  <div class="ease-in-out"></div>
+</div>
+<p>Keep in mind that all transitions take the <strong>same amount of time</strong> (1 second).</p>
+<p>If you want to visualize how other timing functions work, check out this <a href="http://easings.net/">Easing Functions Cheat Sheet</a>.</p>
+<h4><a class="anchor" aria-hidden="true" id="cubic-bezier"></a><a href="#cubic-bezier" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>cubic-bezier</h4>
+<p>If all these <strong>pre-defined</strong> timing functions don't suit you, you can write your own using <strong>cubic bezier</strong> functions.</p>
+<p>The website <a href="http://cubic-bezier.com/">cubic-bezier.com</a> is a simple tool to visually write your own curves.</p>
+<h3><a class="anchor" aria-hidden="true" id="transition-delay"></a><a href="#transition-delay" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>transition-delay</h3>
+<p>A <strong>delay</strong> will define how long the transitions has to <strong>wait</strong> <em>before</em> actually starting.</p>
+<p>Like <code>transition-duration</code>, you can either use seconds <code>s</code> or milliseconds <code>ms</code>.</p>
+<p>{% highlight css %}
+a{ background: blue; color: white; transition: all 1s;}
+div:hover a{ background: red;}
+a.with-delay{ transition-delay: 1s;}
+{% endhighlight %}</p>
+<p>{% highlight html %}</p>
+<div>
+  <p>Hover the grey area</p>
+  <a>Without any delay</a>
+  <a class="with-delay">With a second delay</a>
+</div>
+{% endhighlight %}
+<div class="result" id="result-845">
+  <div>
+    <p>Hover the grey area</p>
+    <a>Without any delay</a>
+    <a class="with-delay">With a second delay</a>
+  </div>
+</div>
+<style type="text/css">
+#result-841{ padding: 1rem;}
+#result-841 a{ background: lightgrey; color: grey; margin-right: 10px; padding: 5px 10px; transition: none;}
+#result-841 a:hover{ background: yellow; color: red;}
+#result-841 .with-transition{ transition: 1s}
+#result-842{ padding: 1rem;}
+#result-842 a{ background: lightgrey; color: grey; margin-right: 10px; padding: 5px 10px; transition: none;}
+#result-842 a:hover{ background: yellow; color: green;}
+#result-842 .with-fast-transition{ transition: 0.5s;}
+#result-842 .with-slow-transition{ transition: 3s;}
+#result-843{ padding: 1rem;}
+#result-843 a{ background: lightgrey; color: grey; margin-right: 10px; padding: 5px 10px; transition: none;}
+#result-843 a:hover{ background: yellow; border: 5px solid blue; color: green;}
+#result-843 .with-background-transition{ transition: 2s; transition-property: background;}
+#result-843 .with-all-transition{ transition: 2s;}
+#result-844{ padding-bottom: 1rem;}
+#result-844 div{ background: crimson; height: 20px; left: 0; margin-top: -1rem; position: relative; transition: 1s; width: 20px;}
+#result-844:hover div{ left: 200px;}
+#result-844 p{ color: grey;}
+#result-844 p strong{ font-weight: bold;}
+#result-844 .ease{ transition-timing-function: ease;} /* Default behavior */
+#result-844 .linear{ transition-timing-function: linear;} /* Constant speed */
+#result-844 .ease-in{ transition-timing-function: ease-in;}
+#result-844 .ease-out{ transition-timing-function: ease-out;}
+#result-844 .ease-in-out{ transition-timing-function: ease-out;}
+#result-844 p:nth-child(1) strong{ color: crimson;}
+#result-844 div:nth-child(2){ background: crimson;}
+#result-844 p:nth-child(3) strong{ color: midnightblue;}
+#result-844 div:nth-child(4){ background: midnightblue;}
+#result-844 p:nth-child(5) strong{ color: mediumseagreen;}
+#result-844 div:nth-child(6){ background: mediumseagreen;}
+#result-844 p:nth-child(7) strong{ color: orangered;}
+#result-844 div:nth-child(8){ background: orangered;}
+#result-844 p:nth-child(9) strong{ color: darkviolet;}
+#result-844 div:nth-child(10){ background: darkviolet;}
+#result-845{ padding: 1rem;}
+#result-845 div{ background: lightgrey; padding: 1rem; width: 400px;}
+#result-845 div p{ color: grey; margin-top: 0;}
+#result-845 a{ background: blue; color: white; padding: 5px 10px; text-decoration: none; transition: all 1s;}
+#result-845 div:hover a{ background: red;}
+#result-845 a.with-delay{ transition-delay: 1s;}
+</style>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="cssgradients.html">← gradient</a><a class="docs-next button" href="cssanimation.html">animation →</a></div></div></div></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2018 Facebook Inc.</section></footer></div></body></html>
