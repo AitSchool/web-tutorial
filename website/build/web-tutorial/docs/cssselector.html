@@ -1,0 +1,161 @@
+<html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>选择器 · Aitschool</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta property="og:title" content="选择器 · Aitschool"/><meta property="og:type" content="website"/><meta property="og:url" content="https://github.com/AitSchool/web-tutorial/index.html"/><meta property="og:description" content="Because we don&#x27;t want to style all our HTML elements at once, we need to be able to **target** a subset of these HTML elements."/><link rel="shortcut icon" href="/web-tutorial/undefined"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/web-tutorial/css/main.css"/></head><body class="sideNavVisible doc"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/web-tutorial/"><h2 class="headerTitle">Aitschool</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/web-tutorial/docs/introduction.html" target="_self">Docs</a></li><li class=""><a href="https://github.com/AitSchool" target="_self">Github</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>CSS</span></h2></div><div class="navGroups"><div class="navGroup navGroupActive"><h3>World Wide Web</h3><ul><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/introduction.html">初识 web 的世界</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/internet.html">什么是因特网</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/web.html">什么是万维网</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/browser.html">web 浏览器</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/requirement.html">学前准备</a></li></ul></div><div class="navGroup navGroupActive"><h3>HTML</h3><ul><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/htmlbasics.html">HTML 基础</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/htmlsyntax.html">HTML语法</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/htmlblockandinline.html">块级元素和行内元素</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/htmlhierarchy.html">HTML家族</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/htmlsemantics.html">HTML语义</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/htmlformatting.html">HTML语法规则</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/htmlvaliddocument.html">规范的HTML文档</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/htmlcontent.html">HTML文档</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/inlinesemantic.html">行内元素语义</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/htmltext.html">文本</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/htmllink.html">链接</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/html-image.html">图片</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/html-table.html">表格</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/html-structure.html">页面结构</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/html-form.html">表单</a></li></ul></div><div class="navGroup navGroupActive"><h3>CSS</h3><ul><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssbasic.html">基础</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/whycssexist.html">为何存在</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/csssyntax.html">语法</a></li><li class="navListItem navListItemActive"><a class="navItem navItemActive" href="/web-tutorial/docs/cssselector.html">选择器</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssinheritance.html">继承</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/csspriority.html">优先级</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/colorunit.html">颜色单位</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/sizeunit.html">布局单位</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/csssizeshorthand.html">合模型缩写</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssreset.html">样式重置</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/csstext.html">文本</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssfontfamily.html">字体</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssfontstyle.html">字体样式</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssfontshorthand.html">字体样式缩写</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/csslineheight.html">line-height</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/csstextstyle.html">文本样式</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssboxmodel.html">盒模型</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssbackground.html">background</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssborder.html">border</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/csspadding.html">padding</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssmargin.html">margin</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssposition.html">position</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssflow.html">文档流</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssfloat.html">float</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/css3.html">css3</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/csspresudo.html">类前缀</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssgradients.html">gradient</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/csstransition.html">transition</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssanimation.html">animation</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/csstransform.html">transform</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssresponsive.html">响应式</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssdisplay.html">display</a></li></ul></div></div></section></div><script>
+          var toggler = document.getElementById('navToggler');
+          var nav = document.getElementById('docsNav');
+          toggler.onclick = function() {
+            nav.classList.toggle('docsSliderActive');
+          };
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1>选择器</h1></header><article><div><span><p>Because we don't want to style all our HTML elements at once, we need to be able to <strong>target</strong> a subset of these HTML elements.</p>
+<p>CSS selectors define <em>which</em> elements we want our styling to be applied to.</p>
+<h3><a class="anchor" aria-hidden="true" id="generic-tag-selectors"></a><a href="#generic-tag-selectors" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Generic tag selectors</h3>
+<p>Targeting generic HTML tags is easy: just use the tag name.</p>
+<p>{% highlight css %}
+a{ /* Links <em>/ }
+p{ /</em> Paragraphs <em>/ }
+ul{ /</em> Unordered lists <em>/ }
+li{ /</em> List items */ }
+{% endhighlight %}</p>
+<p>There's a direct connection between the <em>name</em> of the HTML tag and the CSS <em>selector</em> used.</p>
+<h3><a class="anchor" aria-hidden="true" id="classes"></a><a href="#classes" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Classes</h3>
+<p>Considering we probably don't want to style all paragraphs or all titles identically, we need to <em>differentiate</em> them.</p>
+<p>Of all HTML attributes, the <code>class</code> attribute is the most important for CSS. It allows us to define a <strong>group</strong> of HTML elements that we can <em>target specifically</em>. Just put a dot <code>.</code> in front of the class name you want to use:</p>
+<p>{% highlight css %}
+.date {
+color: red;
+}
+{% endhighlight %}</p>
+<p>On one side, there is the HTML <code>class</code> attribute with the value <code>date</code>. It must match the name of the CSS class.</p>
+<p>You can use any name for your CSS class, as long as it doesn't start with a number.
+{: .info}</p>
+<p>The <code>.date</code> class selector will target all HTML elements that have the <code>class=&quot;date&quot;</code> attribute. So, the following HTML elements will <strong>all</strong> be styled:</p>
+<p>{% highlight html %}</p>
+<p class="date">
+  Saturday Feb 21
+</p>
+<p>
+  The event will be on <em class="date">Saturday</em>.
+</p>
+{% endhighlight %}
+<div class="result">
+  <p style="color:red;">Saturday Feb 21</p>
+  <p>The event will be on <em style="color:red;">Saturday</em>.</p>
+</div>
+<p>Bear in mind that the tag name is <strong>irrelevant</strong>. Only the <code>class</code> HTML attribute is.</p>
+<h3><a class="anchor" aria-hidden="true" id="ids"></a><a href="#ids" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>IDs</h3>
+<p>You can also use the <code>id</code> attribute in your HTML, and target it with a hash <code>#</code> in your CSS:</p>
+<p>{% highlight css %}
+#tagline{ color: orange;}
+{% endhighlight %}</p>
+<p>{% highlight html %}
+<h1 id="tagline">This heading will be orange.</h1>
+{% endhighlight %}</p>
+<p>ID are similar to Classes, as they rely upon an HTML attribute.</p>
+<h3><a class="anchor" aria-hidden="true" id="example"></a><a href="#example" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h3>
+<div class="table">
+  <table>
+    <thead>
+      <tr>
+        <th>HTML</th>
+        <th>Possible CSS selectors</th>
+        <th>What it means</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><pre><code class="hljs">&lt;p&gt;&lt;/p&gt;</code></pre></td>
+        <td><code>p</code></td>
+        <td><code>Every &lt;p&gt;</code></td>
+      </tr>
+      <tr>
+        <td><pre><code class="hljs">&lt;div class="global"&gt;&lt;/div&gt;</code></pre></td>
+        <td>
+          <code>div</code><br>
+          <code>.global</code><br>
+          <code>div.global</code></td>
+          <td>Every <code>&lt;div&gt;</code><br>
+          Every elements with <code>class=”global”</code><br>
+          Every <code>&lt;div&gt;</code> with <code>class=”global”</code>
+        </td>
+      </tr>
+      <tr>
+        <td><pre><code class="hljs">&lt;ul id="menu"&gt;</code></pre></td>
+        <td>
+          <code>#menu</code><br>
+          <code>ul#menu</code>
+        </td>
+        <td>
+          The only element with <code>id=”menu”</code><br>
+          The only <code>&lt;ul&gt;</code> with <code>id=”menu”</code>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <pre><code class="hljs">&lt;ol class="dico"&gt;
+  &lt;li&gt;Un cobaye&lt;/li&gt;
+  &lt;li&gt;Des cobaux&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+        </td>
+        <td>
+          <code>li</code><br>
+          <code>ol li</code><br>
+          <code>.dico li</code>
+        </td>
+        <td>
+          Every <code>&lt;li&gt;</code><br>
+          Every <code>&lt;li&gt;</code> with an <code>&lt;ol&gt;</code> as ancestor <br>
+          Every <code>&lt;li&gt;</code> with a <code>class="dico"</code> element as ancestor
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<h3><a class="anchor" aria-hidden="true" id="combining-selectors"></a><a href="#combining-selectors" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Combining selectors</h3>
+<p>Let's reuse our previous example where we want our dates to be red:</p>
+<p>{% highlight css %}
+.date {
+color: red;
+}
+{% endhighlight %}</p>
+<p>{% highlight html %}</p>
+<p class="date">
+  Saturday Feb 21
+</p>
+<p>
+  The event will be on <em class="date">Saturday</em>.
+</p>
+{% endhighlight %}
+<div class="result">
+  <p style="color:red;">Saturday Feb 21</p>
+  <p>The event will be on <em style="color:red;">Saturday</em>.</p>
+</div>
+<p>What if we want our dates that are in <code>em</code> elements to blue instead? We can <strong>add</strong> the following CSS rule:</p>
+<p>{% highlight css %}
+em.date {
+color: blue;
+}
+{% endhighlight %}</p>
+<p>The <code>em.date</code> combines:</p>
+<ul>
+<li>a tag selector <code>em</code></li>
+<li>a class selector <code>.date</code></li>
+</ul>
+<p>It will only apply to <code>&lt;em class=&quot;date&quot;&gt;&lt;/em&gt;</code> HTML elements. It <strong>won't</strong> affect other <code>.date</code> or <code>em</code>.</p>
+<h3><a class="anchor" aria-hidden="true" id="hierarchy-selectors"></a><a href="#hierarchy-selectors" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Hierarchy selectors</h3>
+<p>A <strong>space</strong> in a selector defines a ancestor/descendant relationship. Let's say we want the links in our header to be in red:</p>
+<p>{% highlight css %}
+header a {
+color: red;
+}
+{% endhighlight %}</p>
+<p>This can be read from right to left as: <em>&quot;Select all <code>a</code> elements that are within a <code>header</code> element&quot;</em>. This will prevent all other links (that aren't in the header) from being affected.</p>
+<h3><a class="anchor" aria-hidden="true" id="pseudo-class-selectors"></a><a href="#pseudo-class-selectors" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Pseudo-class selectors</h3>
+<p>HTML elements can have different <strong>states</strong>. The most common case is when you hover over a link. It's possible in CSS to apply a different style when such an event occurs.</p>
+<p>Pseudo-class selectors are attached to usual selectors and start with a <strong>colon</strong> <code>:</code>:</p>
+<p>{% highlight css %}
+a {
+color: blue;
+}</p>
+<p>a:hover {
+color: red;
+}
+{% endhighlight %}</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="csssyntax.html">← 语法</a><a class="docs-next button" href="cssinheritance.html">继承 →</a></div></div></div></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2018 Facebook Inc.</section></footer></div></body></html>

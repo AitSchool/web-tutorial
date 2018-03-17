@@ -1,0 +1,93 @@
+<html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Sass &lt;strong&gt;variables&lt;/strong&gt; · Aitschool</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta property="og:title" content="Sass &lt;strong&gt;variables&lt;/strong&gt; · Aitschool"/><meta property="og:type" content="website"/><meta property="og:url" content="https://github.com/AitSchool/web-tutorial/index.html"/><meta property="og:description" content="One of the first reasons people turn to Sass is the existence of **CSS variables**."/><link rel="shortcut icon" href="/web-tutorial/undefined"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/web-tutorial/css/main.css"/></head><body class="sideNavVisible doc"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/web-tutorial/"><h2 class="headerTitle">Aitschool</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/web-tutorial/docs/introduction.html" target="_self">Docs</a></li><li class=""><a href="https://github.com/AitSchool" target="_self">Github</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1>Sass &lt;strong&gt;variables&lt;/strong&gt;</h1></header><article><div><span><p>One of the first reasons people turn to Sass is the existence of <strong>CSS variables</strong>.</p>
+<p>Have you ever had to search and replace many occurrences of the same CSS <em>value</em>? If so, variables will help you out.</p>
+<h3><a class="anchor" aria-hidden="true" id="syntax"></a><a href="#syntax" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Syntax</h3>
+<p>You need to prepend a variable with a <code>$</code> dollar sign:</p>
+<p>{% highlight scss %}
+$yellow: #fce473;
+{% endhighlight %}</p>
+<p>This line doesn't do anything apart from <strong>defining</strong> a variable, in our case a shade of yellow:</p>
+<div style="background: #fce473; display: inline-block; padding: 10px; vertical-align: top;">#fce473</div>
+<p>We can then use it throughout our CSS, whenever a <a href="/css-color-units.html">color unit</a> is required:</p>
+<p>{% highlight scss %}
+.quote{ border-left: 5px solid $yellow;}
+{% endhighlight %}</p>
+<p>This <code>.scss</code> file will be <strong>compiled</strong> into a <code>.css</code> file, where all variables will be <em>replaced</em> with their actual <em>value</em>:</p>
+<p>{% highlight css %}
+.quote{ border-left: 5px solid #fce473;}
+{% endhighlight %}</p>
+<p><em>Why is it called a variable?</em>{:.question}
+Well here, the <strong>value</strong> <code>#fce473</code> is variable. Meaning the name <code>$yellow</code> remains <em>fixed</em> but the value can <em>change</em>.
+{: .answer}</p>
+<h3><a class="anchor" aria-hidden="true" id="set-your-variable-only-once"></a><a href="#set-your-variable-only-once" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Set your variable only once</h3>
+<p>To illustrate the purpose of using variables, you need to use it more than once, like this <strong>pink</strong> shade:</p>
+<div style="background: #ff1493; color: white; display: inline-block; padding: 10px; vertical-align: top;">#ff1493</div>
+<p>{% highlight scss %}
+$pink: #ff1493;
+.quote{ border-left: 5px solid $pink;}
+.button{ background: $pink;}
+.sidebar a:hover{ border-bottom-color: $pink;}
+.footer a{ color: $pink;}
+{% endhighlight %}</p>
+<p>This will be compiled into:</p>
+<p>{% highlight css %}
+.quote{ border-left: 5px solid #ff1493;}
+.button{ background: #ff1493;}
+.sidebar a:hover{ border-bottom-color: #ff1493;}
+.footer a{ color: #ff1493;}
+{% endhighlight %}</p>
+<p>If you decided to go for a <em>different</em> shade of pink:</p>
+<div style="background: #ff1493; color: white; display: inline-block; padding: 10px; vertical-align: top;">Old pink</div>
+<div style="background: #c71585; color: white; display: inline-block; padding: 10px; vertical-align: top;">New pink</div>
+<p>You'd only have to change the color value <strong>once</strong>:</p>
+<p>{% highlight scss %}
+$pink: #c71585;
+{% endhighlight %}</p>
+<p>And the resulting CSS would be <strong>automatically</strong> updated:</p>
+<p>{% highlight css %}
+.quote{ border-left: 5px solid #c71585;}
+.button{ background: #c71585;}
+.sidebar a:hover{ border-bottom-color: #c71585;}
+.footer a{ color: #c71585;}
+{% endhighlight %}</p>
+<h3><a class="anchor" aria-hidden="true" id="even-more-abstraction"></a><a href="#even-more-abstraction" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Even more abstraction</h3>
+<p>Now let's say you actually don't want to use pink as your <strong>primary</strong> color, but <strong>green</strong>!</p>
+<div style="background: #32cd32; color: white; display: inline-block; padding: 10px; vertical-align: top;">#32cd32</div>
+<p>You'd have to define a <code>$green: #32cd32;</code> variable <strong>and</strong> replace all the instances of <code>$pink</code> with <code>$green</code> in your SCSS.</p>
+<p>There is a better way:</p>
+<p>{% highlight scss %}
+// Defining color values
+$yellow: #fce473;
+$pink: #c71585;
+$green: #32cd32;
+$blue: #1d90ff;</p>
+<p>// Defining color types
+$primary-color: $green;</p>
+<p>.quote{ border-left: 5px solid $primary-color;}
+.button{ background: $primary-color;}
+.sidebar a:hover{ border-bottom-color: $primary-color;}
+.footer a{ color: $primary-color;}
+{% endhighlight %}</p>
+<p>Instead of <em>directly</em> referencing the variable <code>$green</code>, you define a <strong>primary color</strong> variable that is <em>set</em> to <code>$green</code>.</p>
+<p>When you think about it, you don't <em>really</em> want to use <code>$green</code> throughout your CSS. What you <em>actually</em> want is use your <strong>primary color</strong>, which happens to be green.</p>
+<p>If you decided to use <code>$blue</code> as your primary color, you'd only have to modify a <strong>single line</strong>.</p>
+<h3><a class="anchor" aria-hidden="true" id="for-any-type-of-value"></a><a href="#for-any-type-of-value" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>For any type of value</h3>
+<p>We've used variables to define colors, but you can set <strong>any type of content</strong>:</p>
+<p>{% highlight scss %}
+// Colors
+$yellow:              #fce473;
+$pink:                #c71585;
+$green:               #32cd32;
+$blue:                #1d90ff;</p>
+<p>$primary-color:       $blue;
+$secondary-color:     $yellow;</p>
+<p>// Fonts
+$serif:               &quot;Lora&quot;, &quot;Playfair Display&quot;, Georgia, serif;
+$sans-serif:          &quot;Roboto&quot;, &quot;Source Sans Pro&quot;, &quot;Open Sans&quot;, Arial, sans-serif;
+$monospace:           &quot;Inconsolata&quot;, monospace;</p>
+<p>$primary-font:        $sans-serif;
+$secondary-font:      $serif;</p>
+<p>// Spacing
+$mobile-space:        10px;
+$desktop-space:       35px;
+{% endhighlight %}</p>
+</span></div></article></div><div class="docs-prevnext"></div></div></div></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2018 Facebook Inc.</section></footer></div></body></html>

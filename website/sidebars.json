@@ -1,0 +1,62 @@
+{
+  "docs": {
+    "World Wide Web": [
+        "introduction", 
+        "internet", 
+        "web", 
+        "browser", 
+        "requirement"
+    ],
+    "HTML": [
+        "htmlbasics",
+        "htmlsyntax",
+        "htmlblockandinline",
+        "htmlhierarchy",
+        "htmlsemantics",
+        "htmlformatting",
+        "htmlvaliddocument",
+        "htmlcontent",
+        "inlinesemantic",
+        "htmltext",
+        "htmllink",
+        "html-image",
+        "html-table",
+        "html-structure",
+        "html-form"
+    ],
+    "CSS": [
+        "cssbasic",
+        "whycssexist",
+        "csssyntax",
+        "cssselector",
+        "cssinheritance",
+        "csspriority",
+        "colorunit",
+        "sizeunit",
+        "csssizeshorthand",
+        "cssreset",
+        "csstext",
+        "cssfontfamily",
+        "cssfontstyle",
+        "cssfontshorthand",
+        "csslineheight",
+        "csstextstyle",
+        "cssboxmodel",
+        "cssbackground",
+        "cssborder",
+        "csspadding",
+        "cssmargin",
+        "cssposition",
+        "cssflow",
+        "cssfloat",
+        "css3",
+        "csspresudo",
+        "cssgradients",
+        "csstransition",
+        "cssanimation",
+        "csstransform",
+        "cssresponsive",
+        "cssdisplay"
+    ]
+  }
+}

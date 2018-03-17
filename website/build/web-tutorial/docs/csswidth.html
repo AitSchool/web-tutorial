@@ -1,0 +1,47 @@
+<html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>height/width/overflow · Aitschool</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta property="og:title" content="height/width/overflow · Aitschool"/><meta property="og:type" content="website"/><meta property="og:url" content="https://github.com/AitSchool/web-tutorial/index.html"/><meta property="og:description" content="The dimensions (or height and width) of an element are **dynamic**, as they fluctuate in order to fit the content. It is somehow possible to set **specific** dimensions."/><link rel="shortcut icon" href="/web-tutorial/undefined"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/web-tutorial/css/main.css"/></head><body class="sideNavVisible doc"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/web-tutorial/"><h2 class="headerTitle">Aitschool</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/web-tutorial/docs/introduction.html" target="_self">Docs</a></li><li class=""><a href="https://github.com/AitSchool" target="_self">Github</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1>height/width/overflow</h1></header><article><div><span><p>The dimensions (or height and width) of an element are <strong>dynamic</strong>, as they fluctuate in order to fit the content. It is somehow possible to set <strong>specific</strong> dimensions.</p>
+<p>{% highlight css %}
+blockquote{ width: 600px;}
+{% endhighlight %}</p>
+<p>The blockquote will not take up the whole width available, but will remain 600px wide <strong>in any situation</strong>:</p>
+<ul>
+<li>if the browser window is less wide than 600px, it will show a horizontal scrolling bar</li>
+<li>if the browser window is wider than 600px, the blockquote will stay 600px wide and not take up the whole space</li>
+</ul>
+<p>Because we've only set the width, the blockquote remains fluid in <strong>height</strong>: the height becomes the variable dimension to fit the blockquote's content.</p>
+<h3><a class="anchor" aria-hidden="true" id="setting-both-height-and-width"></a><a href="#setting-both-height-and-width" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Setting both height and width</h3>
+<p>By setting the dimensions of an element, it will remain fixed no matter the length of its content.</p>
+<p>What happens if the content is longer than the element can contain?
+{: .question}</p>
+<p>Because we prevent the element to dynamically alter its dimensions, there is a chance the content will be longer than the element accomodates for and will subsequently <strong>overflow</strong>.</p>
+<p>The default behavior can be surprising: the content will be displayed anyway!</p>
+<p>{% highlight css %}
+blockquote{ background: yellow; height: 50px; width: 100px;}
+{% endhighlight %}</p>
+<p>{% highlight html %}</p>
+<blockquote>The content er... finds a way</blockquote>
+{% endhighlight %}
+<div class="result">
+  <blockquote style="background: yellow; height: 50px; width: 100px;">The content er... finds a way</blockquote>
+</div>
+<h3><a class="anchor" aria-hidden="true" id="css-overflow"></a><a href="#css-overflow" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>CSS overflow</h3>
+<p>The <code>overflow</code> CSS property allows us to manage the case of content being longer than its container.</p>
+<p>The default value is <code>visible</code>: the content will be displayed anyway, because <em>&quot;Why would you want to prevent content from being read by the user if it's present in the code?&quot;</em>. You can consider <strong>HTML as prevalent to CSS</strong>.</p>
+<p>By applying <code>overflow: hidden;</code>, you simply <em>forbid</em> any overflowing content to be seen.</p>
+<div class="result">
+  <blockquote style="background: yellow; height: 50px; overflow: hidden; width: 100px;">The content er... finds a way</blockquote>
+</div>
+<p>If you want your content to overflow but still want to make it accessible, you can decide to display scrollbars by applying <code>overflow: scroll</code>.</p>
+<div class="result">
+  <blockquote style="background: yellow; height: 50px; overflow: scroll; width: 100px;">The content er... finds a way</blockquote>
+</div>
+<p>A better option is use <code>overflow: auto</code>, as the scrollbars will only appear <em>if</em> the content is overflowing, but will remain hidden until then.</p>
+<div class="result">
+  <blockquote style="background: yellow; height: 50px; overflow: auto; width: 100px;">The content er... finds a way</blockquote>
+</div>
+<h3><a class="anchor" aria-hidden="true" id="beware-of-fixed-dimensions"></a><a href="#beware-of-fixed-dimensions" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Beware of fixed dimensions</h3>
+<p>Applying specific dimensions are often required for a design to look visually appealing but can have unintended consequences. In that regard:</p>
+<ul>
+<li>make sure your content doesn't overflow</li>
+<li>if it does, use <code>overflow: hidden</code> or <code>overflow: auto</code> to prevent your design from breaking</li>
+</ul>
+</span></div></article></div><div class="docs-prevnext"></div></div></div></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2018 Facebook Inc.</section></footer></div></body></html>

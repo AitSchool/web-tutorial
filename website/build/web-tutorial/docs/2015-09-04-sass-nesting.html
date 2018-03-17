@@ -1,0 +1,198 @@
+<html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Sass &lt;strong&gt;nesting&lt;/strong&gt; · Aitschool</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta property="og:title" content="Sass &lt;strong&gt;nesting&lt;/strong&gt; · Aitschool"/><meta property="og:type" content="website"/><meta property="og:url" content="https://github.com/AitSchool/web-tutorial/index.html"/><meta property="og:description" content="### Syntax"/><link rel="shortcut icon" href="/web-tutorial/undefined"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/web-tutorial/css/main.css"/></head><body class="sideNavVisible doc"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/web-tutorial/"><h2 class="headerTitle">Aitschool</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/web-tutorial/docs/introduction.html" target="_self">Docs</a></li><li class=""><a href="https://github.com/AitSchool" target="_self">Github</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1>Sass &lt;strong&gt;nesting&lt;/strong&gt;</h1></header><article><div><span><h3><a class="anchor" aria-hidden="true" id="syntax"></a><a href="#syntax" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Syntax</h3>
+<p>In Sass, <strong>nesting CSS rules</strong> allows to define <strong>hierarchy selectors</strong>:</p>
+<p>{% highlight scss %}
+.title{
+strong{}
+em{}
+}
+{% endhighlight %}</p>
+<p>This will be compiled into:</p>
+<p>{% highlight css %}
+.title{}
+.title strong{}
+.title em{}
+{% endhighlight %}</p>
+<p>Because <code>strong</code> and <code>em</code> appear <em>within</em> the <code>.title</code> rule (between the 2 curly braces <code>{</code> <code>}</code>), both will be <strong>prepended</strong> with the parent selector <code>.title</code>.</p>
+<h3><a class="anchor" aria-hidden="true" id="nesting-purpose"></a><a href="#nesting-purpose" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Nesting purpose</h3>
+<p>Because <a href="/css-priority.html">CSS priority</a> can be tricky, it's common to use be <strong>specific</strong> when writing selectors, by combining multiple classes/tags to prevent CSS rules to cancel each other out.</p>
+<p>{% highlight css %}
+.description{}
+.description p{}
+.description p a{}
+.description p a:hover{}
+.description p strong{}
+.description table{}
+.description table tr{}
+.description table tr:nth-child(2n){}
+.description table th,
+.description table td{}
+.description table td.empty,
+.description table th.empty{}
+.description table th{}
+{% endhighlight %}</p>
+<p>To prevent rewriting <code>.description</code>, let's use the ampersand <code>&amp;</code>:</p>
+<p>{% highlight scss %}
+.description{
+p{}
+p a{}
+p a:hover{}
+p strong{}
+table{}
+table tr{}
+table tr:nth-child(2n){}
+table th,
+table td{}
+table th{}
+table td.empty,
+table th.empty{}
+}
+{% endhighlight %}</p>
+<p>You can go even further by replacing <code>&amp; p</code> and <code>&amp; table</code> with <code>&amp;</code> to create <strong>nested</strong> selectors:</p>
+<p>{% highlight scss %}
+.description{
+p{
+a{
+&amp;:hover{}
+}
+strong{}
+}
+table{
+tr{
+&amp;:nth-child(2n){}
+}
+th,
+td{
+&amp;.empty{}
+}
+th{}
+}
+}
+{% endhighlight %}</p>
+<p>Remember <strong><a href="/html-hierarchy.html">HTML nesting</a></strong>? The indentation in Sass allows to <em>replicate</em> how HTML elements are nested.</p>
+<p>Notice how we only wrote <code>table</code> and <code>.empty</code> <strong>once</strong> for example.</p>
+<p>It will generate exactly the CSS we started with:</p>
+<p>{% highlight css %}
+.description{}
+.description p{}
+.description p a{}
+.description p a:hover{}
+.description p strong{}
+.description table{}
+.description table tr{}
+.description table tr:nth-child(2n){}
+.description table th,
+.description table td{}
+.description table td.empty,
+.description table th.empty{}
+.description table th{}
+{% endhighlight %}</p>
+<h3><a class="anchor" aria-hidden="true" id="the-ampersand-parent-selector"></a><a href="#the-ampersand-parent-selector" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>The ampersand parent selector</h3>
+<p>When you nest selectors in Sass, it basically adds a <strong>space</strong> between the <em>parent</em> selector and the <em>child</em> one. So:</p>
+<p>{% highlight scss %}
+//scss
+.parent{
+.child{}
+}</p>
+<p>// becomes in css
+.parent .child{}
+{% endhighlight %}</p>
+<p>The <strong>space</strong> between <code>.parent</code> and <code>.child</code> defines a <strong>hierarchy</strong>: this selector targets HTML elements with <code>class=&quot;child&quot;</code> nested <em>within</em> <code>class=&quot;parent&quot;</code>.</p>
+<p>Now, what if you want to use <strong>pseudo-selectors</strong> like <code>:hover</code>? Or you want to have a selector with <strong>joined classes</strong>? You can use the <strong>ampersand</strong> which is shortcut for the parent selector:</p>
+<p>{% highlight scss %}
+//scss
+.parent{
+&amp;:hover{}
+&amp;.other-class{}
+}</p>
+<p>// becomes in css
+.parent:hover{}
+.parent.other-class{}
+{% endhighlight %}</p>
+<p>Notice how there is <strong>no space</strong> between <code>.parent</code> and either <code>:hover</code> or <code>.other-class</code>.</p>
+<p>The <code>.parent.other-class</code> will target HTML elements that have <code>class=&quot;parent other-class&quot;</code>.</p>
+<h3><a class="anchor" aria-hidden="true" id="full-example"></a><a href="#full-example" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Full example</h3>
+<p>{% highlight css %}
+.post-content{}
+.post-content a{}
+.post-content a:hover{}
+.post-content aside{}
+.post-content blockquote{}
+.post-content code{}
+.post-content h3{}
+.post-content h3 a{}
+.post-content h4{}
+.post-content h4:before{}
+.post-content h4:after{}
+.post-content p{}
+.post-content p:first-child{}
+.post-content p:last-child{}
+.post-content ul{}
+.post-content ul ul{}
+.post-content ul ul ul{}
+.post-content dl{}
+.post-content dl:before{}
+.post-content dl dt{}
+.post-content dl dd{}
+.post-content pre{}
+.post-content pre code{}
+.post-content table{}
+.post-content table tr{}
+.post-content table tr:nth-child(2n){}
+.post-content table th,
+.post-content table td{}
+.post-content table th{}
+.post-content table td.empty,
+.post-content table th.empty{}
+.post-content table code{}
+.post-content table pre{}
+.post-content table pre:before{}
+{% endhighlight %}</p>
+<p>{% highlight scss %}
+.post-content{
+a{
+&amp;:hover{}
+}
+aside{}
+blockquote{}
+code{}
+h3{
+a{}
+}
+h4{
+&amp;:before{}
+&amp;:after{}
+}
+p{
+&amp;:first-child{}
+&amp;:last-child{}
+}
+ul{
+ul{
+ul{}
+}
+}
+dl{
+&amp;:before{}
+dt{}
+dd{}
+}
+pre{
+code{}
+}
+table{
+tr{
+&amp;:nth-child(2n){}
+}
+th,
+td{
+&amp;.empty{}
+}
+th{}
+code{}
+pre{
+&amp;:before{}
+}
+}
+}
+{% endhighlight %}</p>
+</span></div></article></div><div class="docs-prevnext"></div></div></div></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2018 Facebook Inc.</section></footer></div></body></html>

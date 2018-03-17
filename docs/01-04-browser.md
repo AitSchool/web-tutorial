@@ -1,0 +1,155 @@
+---
+id: browser
+title: web 浏览器
+---
+
+#(翻译)efe-前端新手系列教程-浏览器
+
+@(挨踢路透社)
+
+
+你正在使用_Web浏览器_来阅读用_HTML_编写的这个_网页_
+
+### HTML 文件
+
+**网页**像你电脑里其他文件一样，是 **HTML 文件**。他们只是带着`.html`扩展名的文本文件。
+
+你可能会有很多种不同**类型**的文件在你的电脑里，就像：
+
+* `.jpg` 为图片
+* `.mp3` 为音频
+* `.avi` 为视频
+* `.doc` 为Word文档
+* `.xls` 为Excel表格
+
+这些_类型_的每一个文件都可以通过一个相对应的特殊的**程序**打开。这些程序中的一部分可以打开这些文件，其他的程序可以_打开_和_创建_文件。
+
+在默认情况下，**文件**扩展名是隐藏的。在本教程中，我们会编辑这些扩展名，所以请按照这些说明去显示文件扩展名：
+**Windows**: [显示或隐藏文件扩展名](http://windows.microsoft.com/en-us/windows/show-hide-file-name-extensions)  
+**Mac**: [显示或隐藏文件扩展名](https://support.apple.com/kb/PH10845?locale=en_US)
+{: .info}
+
+例如:
+
+* iTunes 能**打开** `.mp3` 文件但不能创建它们。
+* Microsoft Word 既能**打开**又能**创建**`.doc` 文件。
+
+<div class="table">
+  <table>
+    <tr>
+      <th>程序</th>
+      <th>类型</th>
+      <th>
+        可以<em>打开</em>这些文件
+      </th>
+      <th>
+       也可以<em>创建</em>这些文件吗?
+      </th>
+    </tr>
+    <tr>
+      <td>Microsoft Word</td>
+      <td>Word editor</td>
+      <td>
+        <code>.doc</code>
+        <code>.docx</code>
+      </td>
+      <td class="yes"><span>Yes</span></td>
+    </tr>
+    <tr>
+      <td>Paint</td>
+      <td>Graphics</td>
+      <td>
+        <code>.jpg</code>
+        <code>.gif</code>
+        <code>.bmp</code>
+      </td>
+      <td class="yes"><span>Yes</span></td>
+    </tr>
+    <tr>
+      <td>VLC</td>
+      <td>Video player</td>
+      <td>
+        <code>.avi</code>
+        <code>.mpg</code>
+      </td>
+      <td class="no">No</td>
+    </tr>
+    <tr>
+      <td>iTunes</td>
+      <td>Music player</td>
+      <td>
+        <code>.mp3</code>
+        <code>.wav</code>
+        <code>.aiff</code>
+      </td>
+      <td class="no">No</td>
+    </tr>
+    <tr>
+      <td>Firefox</td>
+      <td>Web browser</td>
+      <td>
+        <code>.html</code>
+      </td>
+      <td class="no">No</td>
+    </tr>
+    <tr>
+      <td>Notepad++</td>
+      <td>Text editor</td>
+      <td>
+        <code>.text</code>
+        <code>.html</code>
+      </td>
+      <td class="yes"><span>Yes</span></td>
+    </tr>
+  </table>
+</div>
+
+用来**打开**HTML文档的程序叫**浏览器**，像Firefox或Google Chrome。用来**创建**HTML万当的叫**文本编辑器**，像Notepad++或Sublime Text。
+
+### HTML 源代码
+
+HTML 代码像这样:
+
+{% highlight html %}
+<p>Hello World</p>
+{% endhighlight %}
+
+这行代码使用**文本编辑器**编写的。你可以看到 `<p>` 和 `</p>`标签代表**段落**.
+
+当通过**浏览器**打开时，这些标签**不显示**出来，而是被浏览器**解析**：
+
+<div class="result">
+  <p>Hello World</p>
+</div>
+
+当浏览器看到`<p>` 和 `</p>`标签时就认为`Hello World`为一个**段落**。
+
+记住一个HTML文档有**两种**打开方式：
+
+* 通过**文本编辑器**来**看**源代码
+* 通过**浏览器**解析源代码
+
+### Web 浏览器
+
+Web已经成为互联网的主要用途，所以每台计算机和智能手机都安装了默认浏览器。
+
+流行的浏览器有
+
+* [![Chrome](/images/web-browsers/chrome.png)](http://www.google.com/chrome/) **Chrome**
+* [![Firefox](/images/web-browsers/firefox.png)](https://www.mozilla.org/firefox/) **Firefox**
+* [![Internet Explorer](/images/web-browsers/internet-explorer.png)](https://www.microsoft.com/download/internet-explorer.aspx) **Internet Explorer**
+* [![Opera](/images/web-browsers/opera.png)](http://www.opera.com/) **Opera**
+* [![Safari](/images/web-browsers/safari.png)](http://www.apple.com/safari/) **Safari**
+{: .software}
+
+### 文本编辑器
+
+流行的编辑器有:
+
+* [![Notepad++](/images/text-editors/notepad-plus-plus.png)](https://notepad-plus-plus.org/) **Notepad++**
+* [![Sublime Text](/images/text-editors/sublime-text.png)](http://www.sublimetext.com/) **Sublime Text**
+{: .software}
+
+你需要安装一个编辑器来**编写**HTML和CSS。
+
+虽然本教程的其余部分不需要编写任何代码，但**推荐**你自己尝试着去编写例子。

@@ -1,0 +1,312 @@
+<html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>gradient · Aitschool</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta property="og:title" content="gradient · Aitschool"/><meta property="og:type" content="website"/><meta property="og:url" content="https://github.com/AitSchool/web-tutorial/index.html"/><meta property="og:description" content="When we talk about gradients in CSS, we talk about **gradients of colors**."/><link rel="shortcut icon" href="/web-tutorial/undefined"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/web-tutorial/css/main.css"/></head><body class="sideNavVisible doc"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/web-tutorial/"><h2 class="headerTitle">Aitschool</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/web-tutorial/docs/introduction.html" target="_self">Docs</a></li><li class=""><a href="https://github.com/AitSchool" target="_self">Github</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>CSS</span></h2></div><div class="navGroups"><div class="navGroup navGroupActive"><h3>World Wide Web</h3><ul><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/introduction.html">初识 web 的世界</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/internet.html">什么是因特网</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/web.html">什么是万维网</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/browser.html">web 浏览器</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/requirement.html">学前准备</a></li></ul></div><div class="navGroup navGroupActive"><h3>HTML</h3><ul><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/htmlbasics.html">HTML 基础</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/htmlsyntax.html">HTML语法</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/htmlblockandinline.html">块级元素和行内元素</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/htmlhierarchy.html">HTML家族</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/htmlsemantics.html">HTML语义</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/htmlformatting.html">HTML语法规则</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/htmlvaliddocument.html">规范的HTML文档</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/htmlcontent.html">HTML文档</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/inlinesemantic.html">行内元素语义</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/htmltext.html">文本</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/htmllink.html">链接</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/html-image.html">图片</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/html-table.html">表格</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/html-structure.html">页面结构</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/html-form.html">表单</a></li></ul></div><div class="navGroup navGroupActive"><h3>CSS</h3><ul><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssbasic.html">基础</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/whycssexist.html">为何存在</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/csssyntax.html">语法</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssselector.html">选择器</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssinheritance.html">继承</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/csspriority.html">优先级</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/colorunit.html">颜色单位</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/sizeunit.html">布局单位</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/csssizeshorthand.html">合模型缩写</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssreset.html">样式重置</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/csstext.html">文本</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssfontfamily.html">字体</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssfontstyle.html">字体样式</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssfontshorthand.html">字体样式缩写</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/csslineheight.html">line-height</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/csstextstyle.html">文本样式</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssboxmodel.html">盒模型</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssbackground.html">background</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssborder.html">border</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/csspadding.html">padding</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssmargin.html">margin</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssposition.html">position</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssflow.html">文档流</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssfloat.html">float</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/css3.html">css3</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/csspresudo.html">类前缀</a></li><li class="navListItem navListItemActive"><a class="navItem navItemActive" href="/web-tutorial/docs/cssgradients.html">gradient</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/csstransition.html">transition</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssanimation.html">animation</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/csstransform.html">transform</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssresponsive.html">响应式</a></li><li class="navListItem"><a class="navItem" href="/web-tutorial/docs/cssdisplay.html">display</a></li></ul></div></div></section></div><script>
+          var toggler = document.getElementById('navToggler');
+          var nav = document.getElementById('docsNav');
+          toggler.onclick = function() {
+            nav.classList.toggle('docsSliderActive');
+          };
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1>gradient</h1></header><article><div><span><p>When we talk about gradients in CSS, we talk about <strong>gradients of colors</strong>.</p>
+<p>There are 2 types of gradients in CSS:</p>
+<ul>
+<li><strong>linear</strong>: colors go from point to another, in a <em>straight</em> line</li>
+<li><strong>radials</strong>: colors go from the center of a circle to its edges, in <em>all</em> directions</li>
+</ul>
+<p>A gradient is considered a <strong>background image</strong> and must be used with the according property.</p>
+<h3><a class="anchor" aria-hidden="true" id="linear-gradient"></a><a href="#linear-gradient" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>linear-gradient</h3>
+<p>The syntax for linear gradients is <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient">quite complex</a>, but the basic idea is to define:</p>
+<ul>
+<li>which <strong>colors</strong> you want</li>
+<li>where these colors must appear <strong>along the axis</strong> (at the start, middle, end, etc.)</li>
+<li>in which <strong>direction</strong> the gradient must go</li>
+</ul>
+<p>Let's start with a simple 2 color gradient:</p>
+<p>{% highlight css %}
+div{ background-image: linear-gradient(red, blue);}
+{% endhighlight %}</p>
+<p>{% highlight html %}</p>
+<div>A simple vertical background gradient</div>
+{% endhighlight %}
+<div class="result" style="padding: 1rem;">
+  <div style="background-image: linear-gradient(red, blue);">A simple vertical background gradient</div>
+</div>
+<p>By default:</p>
+<ul>
+<li>the <strong>direction</strong> is <strong>vertical</strong>, from <em>top</em> to <em>bottom</em></li>
+<li>the <strong>first</strong> color is at the <strong>start</strong> (top)</li>
+<li>the <strong>second</strong> color is at the <strong>end</strong> (bottom)</li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="changing-the-direction"></a><a href="#changing-the-direction" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Changing the direction</h4>
+<p>If the top to bottom direction doesn't suit you, you can alter it by either:</p>
+<ul>
+<li>defining the <strong>destination of the gradient</strong>, with keywords like <code>to left top</code></li>
+<li>defining a specific <strong>angle</strong> in degrees like <code>45 deg</code></li>
+</ul>
+<p>This direction must be set <em>before</em> the colors:</p>
+<p>{% highlight css %}
+div{ background-image: linear-gradient(to bottom right, yellow, purple); width: 200px;}
+{% endhighlight %}</p>
+<p>{% highlight html %}</p>
+<div>A diagonal gradient from the top left corner to the bottom right one</div>
+{% endhighlight %}
+<div class="result" style="padding: 1rem;">
+  <div style="background-image: linear-gradient(to bottom right, yellow, purple); width: 200px;">A diagonal gradient from the top left corner to the bottom left one</div>
+</div>
+<p>If you want a more <strong>specific angle</strong>, you can use a value in <strong>degrees</strong>:</p>
+<ul>
+<li><code>0deg</code> is the default value, from top to bottom</li>
+<li><code>20deg</code> is slightly diagonal, going <strong>clockwise</strong></li>
+<li><code>90deg</code> is like 3pm, from right to left</li>
+<li><code>180deg</code> is from bottom to top</li>
+</ul>
+<p>{% highlight css %}
+div{ background-image: linear-gradient(20deg, green, blue); width: 150px;}
+{% endhighlight %}</p>
+<p>{% highlight html %}</p>
+<div>A diagonal gradient with an angle of 20 degrees</div>
+{% endhighlight %}
+<div class="result" style="padding: 1rem;">
+  <div style="background-image: linear-gradient(20deg, green, blue); width: 150px;">A diagonal gradient with an angle of 20 degrees</div>
+</div>
+<h4><a class="anchor" aria-hidden="true" id="adding-more-colors"></a><a href="#adding-more-colors" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Adding more colors</h4>
+<p>You can insert as many colors as you want. They will be <strong>equally distributed</strong> along the axis:</p>
+<ul>
+<li><strong>2 colors</strong>: 0% and 100%</li>
+<li><strong>3 colors</strong>: 0%, 50% and 100%</li>
+<li><strong>4 colors</strong>: 0%, 33%, 67% and 100%</li>
+</ul>
+<p>{% highlight css %}
+div{ background-image: linear-gradient(orange, grey, yellow); width: 150px;}
+{% endhighlight %}</p>
+<p>{% highlight html %}</p>
+<div>A rather ugly gradient, but you get the idea</div>
+{% endhighlight %}
+<div class="result" style="padding: 1rem;">
+  <div style="background-image: linear-gradient(orange, grey, yellow); width: 150px;">A rather ugly gradient, but you get the idea</div>
+</div>
+<h4><a class="anchor" aria-hidden="true" id="setting-specific-color-stops"></a><a href="#setting-specific-color-stops" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Setting specific color stops</h4>
+<p>If you don't want colors to equally distributed, you can set specific <strong>color stop positions</strong>, using either percentages <code>%</code> or pixels <code>px</code>:</p>
+<p>{% highlight css %}
+div{ background-image: linear-gradient(orange, grey 10%, yellow 50%); width: 150px;}
+{% endhighlight %}</p>
+<p>{% highlight html %}</p>
+<div>An even uglier gradient, but you get the idea</div>
+{% endhighlight %}
+<div class="result" style="padding: 1rem;">
+  <div style="background-image: linear-gradient(orange, grey 10%, yellow 50%); width: 150px;">An even uglier gradient, but you get the idea</div>
+</div>
+<p>In this setup:</p>
+<ul>
+<li><code>orange</code> has no stop position, so it defaults to <strong>zero</strong> <code>0%</code></li>
+<li><code>grey</code> is closer to the top, at <code>10%</code> instead of <code>50%</code></li>
+<li><code>yellow</code> takes half of the gradient, from <code>50%</code> to the end <code>100%</code></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="radial-gradient"></a><a href="#radial-gradient" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>radial-gradient</h3>
+<p>While linear gradients follow a single-line axis, <strong>radial gradients</strong> spread out in all directions. Their syntax is fairly similar to linear ones, as they both have <strong>color stops</strong>. But instead of specifying a <em>direction</em> you need to specify:</p>
+<ul>
+<li>a <strong>shape</strong>: either a circle or an ellipse</li>
+<li>a <strong>starting point</strong>: which will be the center of the circle/ellipse</li>
+<li>an <strong>end point</strong>: where the edge of the circle/ellipse will be</li>
+</ul>
+<p>{% highlight css %}
+div{ background-image: radial-gradient(red, yellow); padding: 1rem; width: 300px;}
+{% endhighlight %}</p>
+<p>{% highlight html %}</p>
+<div>This looks like the sun, doesn't it?</div>
+{% endhighlight %}
+<div class="result" style="padding: 1rem;">
+  <div style="background-image: radial-gradient(red, yellow); padding: 1rem; width: 300px;">This looks like the sun, doesn't it?</div>
+</div>
+<p>By default:</p>
+<ul>
+<li>the gradient is an <strong>ellipse</strong></li>
+<li>the first color starts at the <strong>center</strong></li>
+<li>the last color ends at the <strong>farthest corner</strong></li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="start-position"></a><a href="#start-position" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>start position</h4>
+<p>The <strong>start position</strong> works like <strong><a href="/css-background.html#background-position">background positions</a></strong>. You set it with the <code>at</code> keyword.</p>
+<p>{% highlight css %}
+div{ background-image: radial-gradient(at top right, black, lightgrey); padding: 1rem; width: 300px;}
+{% endhighlight %}</p>
+<p>{% highlight html %}</p>
+<div>A gloomy day.</div>
+{% endhighlight %}
+<div class="result" style="padding: 1rem;">
+  <div style="background-image: radial-gradient(at top right, black, lightgrey); padding: 1rem; width: 300px;">A gloomy day.</div>
+</div>
+<h4><a class="anchor" aria-hidden="true" id="end-position"></a><a href="#end-position" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>end position</h4>
+<p>By default, the shape will end at the <strong>farthest corner</strong>. You can either choose:</p>
+<ul>
+<li><code>closest-side</code></li>
+<li><code>closest-corner</code></li>
+<li><code>farthest-side</code></li>
+<li><code>farthest-corner</code></li>
+</ul>
+<p>The difference is both hard to grasp and to visualize, so I won't go into details. Mozilla has a <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/radial-gradient#Values">good description of the different values</a>.</p>
+<p>{% highlight css %}
+div{ background-image: radial-gradient(closest-corner at 20px 20px, green, blue); padding: 1rem; width: 300px;}
+div:hover{ background-image: radial-gradient(farthest-side at 20px 20px, green, blue)}
+{% endhighlight %}</p>
+<p>{% highlight html %}</p>
+<div>Hover this green star in the sky to see it expand.</div>
+{% endhighlight %}
+<div class="result" id="result-831">
+  <div>Hover this green star in the sky to see it expand.</div>
+</div>
+<h4><a class="anchor" aria-hidden="true" id="fixed-size"></a><a href="#fixed-size" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fixed size</h4>
+<p>Instead of setting both start <em>and</em> end positions, you can just set <strong>specific dimensions</strong>:</p>
+<p>{% highlight css %}
+div{ background-image: radial-gradient(20px 10px at 75% 50%, darkviolet, pink); padding: 1rem; width: 300px;}
+{% endhighlight %}</p>
+<p>{% highlight html %}</p>
+<div>A small violet disc in a sea of pink.</div>
+{% endhighlight %}
+<div class="result">
+  <div style="background-image: radial-gradient(20px 10px at 75% 50%, darkviolet, pink); padding: 1rem; width: 300px;">A small violet disc in a sea of pink.</div>
+</div>
+<p>CSS gradients are powerful, considering how endless the options are.</p>
+<p>The examples of this page are voluntarily &quot;ugly&quot;, with pronounced color differences, to better explain what how each property works.</p>
+<p>But it's quite easy to write more <strong>subtle</strong> gradients, especially for buttons:</p>
+<p>{% highlight css %}
+.button-grey  { background-image: linear-gradient(#f2f2f2, #f2f2f2);}
+.button-yellow{ background-image: linear-gradient(#fce374, #fcdf5b);}
+.button-orange{ background-image: linear-gradient(#f58a38, #f57c20);}
+.button-red   { background-image: linear-gradient(#ed6d64, #ed574c);}
+.button-purple{ background-image: linear-gradient(#847bba, #7568ba);}
+.button-blue  { background-image: linear-gradient(#42b0e3, #2ba9e3);}
+.button-green { background-image: linear-gradient(#97cc76, #8bcc62);}
+{% endhighlight %}</p>
+<div class="result" id="result-832">
+  <a class="button-grey">Button</a>
+  <a class="button-yellow">Button</a>
+  <a class="button-orange">Button</a>
+  <a class="button-red">Button</a>
+  <a class="button-purple">Button</a>
+  <a class="button-blue">Button</a>
+  <a class="button-green">Button</a>
+</div>
+<style type="text/css">
+#result-831{ padding: 1rem;}
+#result-831 div{ background-image: radial-gradient(closest-corner at 20px 20px, green, blue); padding: 1rem; width: 300px;}
+#result-831 div:hover{ background-image: radial-gradient(farthest-side at 20px 20px, green, blue)}
+#result-832{ padding: 1rem;}
+#result-832 a{ background-image: linear-gradient(lightblue, skyblue); border: 1px solid #eee; border-radius: 3px; color: grey; display: inline-block; line-height: 32px; padding: 0 15px; text-decoration: none; transition: none; vertical-align: top;}
+#result-832 .button-grey {
+  background-color: #f2f2f2;
+  background-image: linear-gradient(to bottom, #f2f2f2, #f2f2f2);
+  border: 1px solid #bfbfbf;
+  box-shadow: inset 0 1px 0 white, inset 0 -1px 0 #d9d9d9, inset 0 0 0 1px #f2f2f2, 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: #8c8c8c;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+#result-832 .button-grey:hover, #result-832 .button-grey:focus {
+  background: #f2f2f2;
+  border-color: #8c8c8c;
+  box-shadow: inset 0 1px 0 white, inset 0 -1px 0 #d9d9d9, inset 0 0 0 1px #f2f2f2;
+}
+#result-832 .button-grey:active {
+  background: #f2f2f2;
+  box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+<p>#result-832 .button-blue {
+background-color: #42b0e3;
+background-image: linear-gradient(to bottom, #42b0e3, #2ba9e3);
+border: 1px solid #107db0;
+box-shadow: inset 0 1px 0 #7cd4fc, inset 0 -1px 0 #2696c9, inset 0 0 0 1px #59b7e3, 0 2px 4px rgba(0, 0, 0, 0.2);
+color: white;
+text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+#result-832 .button-blue:hover, #result-832 .button-blue:focus {
+background: #2ba9e3;
+border-color: #004c6f;
+box-shadow: inset 0 1px 0 #7cd4fc, inset 0 -1px 0 #2696c9, inset 0 0 0 1px #59b7e3;
+}
+#result-832 .button-blue:active {
+background: #2ba9e3;
+box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2);
+}</p>
+<p>#result-832 .button-green {
+background-color: #97cc76;
+background-image: linear-gradient(to bottom, #97cc76, #8bcc62);
+border: 1px solid #5f993a;
+box-shadow: inset 0 1px 0 #c6e5b3, inset 0 -1px 0 #79b356, inset 0 0 0 1px #a4cc8b, 0 2px 4px rgba(0, 0, 0, 0.2);
+color: white;
+text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+#result-832 .button-green:hover, #result-832 .button-green:focus {
+background: #8bcc62;
+border-color: #326612;
+box-shadow: inset 0 1px 0 #c6e5b3, inset 0 -1px 0 #79b356, inset 0 0 0 1px #a4cc8b;
+}
+#result-832 .button-green:active {
+background: #8bcc62;
+box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2);
+}</p>
+<p>#result-832 .button-purple {
+background-color: #847bba;
+background-image: linear-gradient(to bottom, #847bba, #7568ba);
+border: 1px solid #493e87;
+box-shadow: inset 0 1px 0 #bab6d4, inset 0 -1px 0 #655aa1, inset 0 0 0 1px #948dba, 0 2px 4px rgba(0, 0, 0, 0.2);
+color: white;
+text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+#result-832 .button-purple:hover, #result-832 .button-purple:focus {
+background: #7568ba;
+border-color: #1f1654;
+box-shadow: inset 0 1px 0 #bab6d4, inset 0 -1px 0 #655aa1, inset 0 0 0 1px #948dba;
+}
+#result-832 .button-purple:active {
+background: #7568ba;
+box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2);
+}</p>
+<p>#result-832 .button-orange {
+background-color: #f58a38;
+background-image: linear-gradient(to bottom, #f58a38, #f57c20);
+border: 1px solid #c25706;
+box-shadow: inset 0 1px 0 #ffb984, inset 0 -1px 0 #db6f1d, inset 0 0 0 1px #f59851, 0 2px 4px rgba(0, 0, 0, 0.2);
+color: white;
+text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+#result-832 .button-orange:hover, #result-832 .button-orange:focus {
+background: #f57c20;
+border-color: #773300;
+box-shadow: inset 0 1px 0 #ffb984, inset 0 -1px 0 #db6f1d, inset 0 0 0 1px #f59851;
+}
+#result-832 .button-orange:active {
+background: #f57c20;
+box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2);
+}</p>
+<p>#result-832 .button-red {
+background-color: #ed6d64;
+background-image: linear-gradient(to bottom, #ed6d64, #ed574c);
+border: 1px solid #ba3329;
+box-shadow: inset 0 1px 0 #ffb0aa, inset 0 -1px 0 #d44d44, inset 0 0 0 1px #ed837b, 0 2px 4px rgba(0, 0, 0, 0.2);
+color: white;
+text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+#result-832 .button-red:hover, #result-832 .button-red:focus {
+background: #ed574c;
+border-color: #870c03;
+box-shadow: inset 0 1px 0 #ffb0aa, inset 0 -1px 0 #d44d44, inset 0 0 0 1px #ed837b;
+}
+#result-832 .button-red:active {
+background: #ed574c;
+box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2);
+}</p>
+<p>#result-832 .button-yellow {
+background-color: #fce374;
+background-image: linear-gradient(to bottom, #fce374, #fcdf5b);
+border: 1px solid #c9ae34;
+box-shadow: inset 0 1px 0 #fff6ce, inset 0 -1px 0 #e3c852, inset 0 0 0 1px #fce88d, 0 2px 4px rgba(0, 0, 0, 0.2);
+color: #967d09;
+text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+#result-832 .button-yellow:hover, #result-832 .button-yellow:focus {
+background: #fcdf5b;
+border-color: #967d09;
+box-shadow: inset 0 1px 0 #fff6ce, inset 0 -1px 0 #e3c852, inset 0 0 0 1px #fce88d;
+}
+#result-832 .button-yellow:active {
+background: #fcdf5b;
+box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2);
+}</p>
+</style>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="csspresudo.html">← 类前缀</a><a class="docs-next button" href="csstransition.html">transition →</a></div></div></div></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2018 Facebook Inc.</section></footer></div></body></html>
